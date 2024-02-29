@@ -101,106 +101,144 @@ Test this in Postman or by using `fetch` in the browser.
 
 Request components:
 
-- Method:
-- URL:
+- Method: GET
+- URL: /artists/:artistid
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code: 200 
+- Headers: Content-Type: application/json
+- Body: 
+```json
+    {
+      "artistId": 1,
+      "name": "Red Hot Chili Peppers"
+    }
+  ```
 
 ### Add an artist
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: POST 
+- URL: /artists
+- Headers: Content-Type: application/json
+- Body: 
+```json
+    {
+      "artistId": 2,
+      "name": "Drake"
+    }
+```
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code: 201
+- Headers: Content-Type: plain/text
+- Body: "Added successfully"
 
 ### Edit a specified artist by artistId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: PATCH
+- URL:  /artists/:artistid
+- Headers: Content-Type: application/json
+- Body: 
+```json
+    {
+      "artistId": 1,
+      "name": "Blue Cold Chili Peppers"
+    }
+  ```
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code: 200
+- Headers:  Content-Type: plain/text
+- Body: "Updated Successfully"
 
 ### Delete a specified artist by artistId
 
 Request components:
 
-- Method:
-- URL:
+- Method: DELETE
+- URL:  /artists/:artistid
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code: 200
+- Headers: Content-Type: plain/text
+- Body:  "Deleted successfully"
 
 ### Get all albums of a specific artist based on artistId
 
 Request components:
 
-- Method:
-- URL:
+- Method: GET
+- URL: /artists/:artistid/albums
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
+- Status code: 200
+- Headers: Content-Type: application/json
 - Body:
+```json
+   {
+      "albumid": 1,
+      "name": "real album name",
+      "artistid": 1
+    }
+```
 
 ### Get a specific album's details based on albumId
 
 Request components:
 
-- Method:
-- URL:
+- Method: GET
+- URL: /artists/:artistid/albums/:albumid
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
+- Status code: 200
+- Headers: Content-Type: application/json
 - Body:
-
+```json
+   {
+      "albumid": 1,
+      "name": "real album name",
+      "artistid": 1
+    }
+```
 ### Add an album to a specific artist based on artistId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method: POST 
+- URL: /artists/:artistid/albums/
+- Headers: Content-Type: application/json
+- Body: 
+```json
+   {
+      "albumid": 2,
+      "name": "even realer album name",
+      "artistid": 1
+    }
+```
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code: 201
+- Headers: plain/text
+- Body: "Created Successfully"
 
 ### Edit a specified album by albumId
 
