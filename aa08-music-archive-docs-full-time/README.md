@@ -166,8 +166,8 @@ Request components:
 
 - Method: DELETE
 - URL:  /artists/:artistid
-- Headers:
-- Body:
+- Headers: none
+- Body: none
 
 Response components:
 
